@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>YUI Image Uploader Example</title>
+<!-- Skin CSS file -->
+<link rel="stylesheet" type="text/css"
+  href="http://yui.yahooapis.com/2.7.0/build/assets/skins/sam/skin.css">
+<!-- Utility Dependencies -->
+<script type="text/javascript" 
+  src="http://yui.yahooapis.com/2.7.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script type="text/javascript" 
+  src="http://yui.yahooapis.com/2.7.0/build/element/element-min.js"></script>
+<!-- Needed for Menus, Buttons and Overlays used in the Toolbar -->
+<script src="http://yui.yahooapis.com/2.7.0/build/container/container_core-min.js"></script>
+<script src="http://yui.yahooapis.com/2.7.0/build/menu/menu-min.js"></script>
+<script src="http://yui.yahooapis.com/2.7.0/build/button/button-min.js"></script>
+<!-- Source file for Rich Text Editor-->
+<script src="http://yui.yahooapis.com/2.7.0/build/editor/editor-min.js"></script>
+<script src="http://yui.yahooapis.com/2.7.0/build/connection/connection-min.js"></script>
+<script src="scripts/yui-image-uploader26.js"></script>
+<script type="text/javascript">
+var myEditor = new YAHOO.widget.Editor('example_editor', { 
+        height: '300px', 
+        width: '522px', 
+        dompath: true, 
+        animate: true 
+    }); 
+// this is the part you need to fix for your server
+yuiImgUploader(myEditor, 'example_editor', 
+       '/server/path/to/yui_img_uploader.php','image');
+    myEditor.render(); 
+</script>
+ 
+</head>
+<body class="yui-skin-sam">
+<p>Example Editor.  You should be able to see the "Browse" or "Choose File" 
+button on the image upload dialog with this page, but you won't be able
+to actually upload a file until you correct the path to your upload script.
+</p>
+<p>Check the contrib folder for sample upload scripts.
+</p>
+
+<form onsubmit="return false;">
+<textarea id="example_editor"></textarea><br />
+</form>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+YUI Image Uploader.
+
+* Copy the editor code and initialization scripts from index.html to your own 
+  page that you'd like the editor to appear on.
+
+* Put the yui-image-uploaderXX.js script from /scripts on your server and make
+  sure your path on the editor page correctly points to its location.
+
+* Add backend programming support.  See
+  http://allmybrain.com/2007/10/16/an-image-upload-extension-for-yui-rich-text-editor/
+  for details and links.
+
+Enjoy!
+
+
